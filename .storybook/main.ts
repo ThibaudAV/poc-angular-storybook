@@ -74,7 +74,7 @@ module.exports = {
      *
      * @see https://github.com/geometricpanda/geometricpanda/tree/main/libs/storybook-addon-badges
      */
-    // '@geometricpanda/storybook-addon-badges',
+    '@geometricpanda/storybook-addon-badges',
 
     /**
      * A Storybook addon that includes SCSS by default in Storybook
@@ -85,15 +85,19 @@ module.exports = {
 
     /**
      * A Storybook addon that uses the new Angular Ivy renderer instead of the ViewEngine that Storybook uses by default.
+     *
+     * @see https://github.com/storybookjs/addon-angular-ivy
      */
     'storybook-addon-angular-ivy',
 
     /**
-     * A Storybook addon that displays code story. It uses prismjs for syntax highlighting.
+     * A Storybook addon that shows you the JSX of the Story
      *
-     * Adds a tab that displays angular template code for each story.
+     * Adds a "JSX" tab.
+     *
+     * @see https://storybook.js.org/addons/storybook-addon-jsx/
      */
-    '@gilsdav/storybook-angular-source',
+    'storybook-addon-jsx',
   ],
   core: {
     builder: 'webpack5',

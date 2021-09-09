@@ -1,12 +1,17 @@
 import { setCompodocJson } from '@storybook/addon-docs/angular'
-import docJson from '../documentation.json'
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport'
 import { viewports as breakpoints } from '../src/styles/breakpoints'
 import { withDesign } from 'storybook-addon-designs'
 
-setCompodocJson(docJson)
+import { BADGE } from '@geometricpanda/storybook-addon-badges'
 
-// import { BADGE } from '@geometricpanda/storybook-addon-badges'
+import { addDecorator } from '@storybook/angular'
+import { jsxDecorator } from 'storybook-addon-jsx'
+
+import docJson from '../documentation.json'
+
+setCompodocJson(docJson)
+addDecorator(jsxDecorator)
 
 // Create custom viewports using widths defined in design tokens
 const breakpointViewports = Object.keys(breakpoints).reduce((acc, key) => {
@@ -33,32 +38,32 @@ export const parameters = {
       ...INITIAL_VIEWPORTS,
     },
   },
-  // badgesConfig: {
-  //   [BADGE.DEFAULT]: {
-  //     contrast: '#EDEFF5',
-  //     color: '#474D66',
-  //   },
-  //   [BADGE.BETA]: {
-  //     contrast: '#D6E0FF',
-  //     color: '#2952CC',
-  //   },
-  //   [BADGE.STABLE]: {
-  //     contrast: '#DCF2EA',
-  //     color: '#317159',
-  //   },
-  //   [BADGE.NEEDS_REVISION]: {
-  //     contrast: '#FFEFD2',
-  //     color: '#66460D',
-  //   },
-  //   [BADGE.OBSOLETE]: {
-  //     contrast: '#F9DADA',
-  //     color: '#7D2828',
-  //   },
-  //   [BADGE.EXPERIMENTAL]: {
-  //     contrast: '#E7E4F9',
-  //     color: '#6E62B6',
-  //   },
-  // },
+  badgesConfig: {
+    [BADGE.DEFAULT]: {
+      contrast: '#EDEFF5',
+      color: '#474D66',
+    },
+    [BADGE.BETA]: {
+      contrast: '#D6E0FF',
+      color: '#2952CC',
+    },
+    [BADGE.STABLE]: {
+      contrast: '#DCF2EA',
+      color: '#317159',
+    },
+    [BADGE.NEEDS_REVISION]: {
+      contrast: '#FFEFD2',
+      color: '#66460D',
+    },
+    [BADGE.OBSOLETE]: {
+      contrast: '#F9DADA',
+      color: '#7D2828',
+    },
+    [BADGE.EXPERIMENTAL]: {
+      contrast: '#E7E4F9',
+      color: '#6E62B6',
+    },
+  },
   previewTabs: {
     'storybook/docs/panel': {
       title: 'Documentation',

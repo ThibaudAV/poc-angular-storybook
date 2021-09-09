@@ -1,17 +1,18 @@
 import React from 'react'
 
 import { Story, Meta } from '@storybook/angular'
-import button, { DefaultPropsObj } from './button'
+import Button, { DefaultProps } from './button'
 import Readme from './README.mdx'
 
 import { Title, Subtitle, Description, Primary, ArgsTable, Stories, PRIMARY_STORY } from '@storybook/addon-docs'
+import { BADGE } from '@geometricpanda/storybook-addon-badges'
 
 import * as FigmaUrl from '../../figma/urls.json'
 import FigmaProperties from '../../figma/FigmaProperties'
 
 export default {
   title: 'Example/Button',
-  component: button,
+  component: Button,
   argTypes: {
     backgroundColor: { control: 'color' },
   },
@@ -22,7 +23,7 @@ export default {
     docs: {
       page: () => (
         <>
-          <FigmaProperties componentProps={DefaultPropsObj} url={FigmaUrl.Button.properties} />
+          <FigmaProperties componentProps={DefaultProps} url={FigmaUrl.Button.properties} />
           <Title />
           <Subtitle />
           <Description />
@@ -33,15 +34,16 @@ export default {
         </>
       ),
     },
+    badges: [BADGE.BETA],
   },
 } as Meta
 
-const Template: Story<button> = (args: button) => ({
+const Template: Story = args => ({
   props: args,
 })
 
-export const P = Template.bind({})
-P.args = {
+export const Default = Template.bind({})
+Default.args = {
   primary: true,
   label: 'Button',
 }

@@ -1,45 +1,18 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core'
 
-type DefaultProps = {
-  /**
-   * Clear button styles leaving just a text
-   */
-  clear?: boolean
-  round?: boolean
-  /**
-   * Is the button large?
-   */
-  large?: boolean
-  /**
-   * Does the button have an icon?
-   */
-  icon?: string
-  /**
-   * Size of the icon
-   */
-  iconSize?: number
-  /**
-   * Is the button disabled?
-   */
-  disabled?: boolean
-  /**
-   * Does the button have an icon?
-   */
-  children?: React.ReactNode | string
-  /**
-   * Optional click handler
-   */
+export type ButtonProps = {
+  primary?: boolean
+  backgroundColor?: string
+  size?: string
+  label?: string
   onClick?: () => void
 }
 
-export const DefaultPropsObj: DefaultProps = {
-  clear: undefined,
-  round: undefined,
-  large: undefined,
-  icon: undefined,
-  iconSize: undefined,
-  disabled: undefined,
-  children: undefined,
+export const DefaultProps: ButtonProps = {
+  primary: false,
+  backgroundColor: '',
+  size: '',
+  label: '',
   onClick: undefined,
 }
 
@@ -55,7 +28,7 @@ export const DefaultPropsObj: DefaultProps = {
   </button>`,
   styleUrls: ['./button.css'],
 })
-export default class Button {
+export default class Button<ButtonProps> {
   /**
    * Is this the principal call to action on the page?
    */

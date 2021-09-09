@@ -1,13 +1,14 @@
 import { addons } from '@storybook/addons'
 import { create } from '@storybook/theming'
-import logo from './../src/assets/logo/exo-black.svg'
+import logo from './../src/assets/logo/chrono-logo.svg'
 
 const theme = create({
   base: 'light',
 
   // Base colors
-  colorPrimary: '#7C5D81',
-  colorSecondary: '#008199', // Primary and Secondary need to be inverted for some reasons
+  // Primary and Secondary need to be inverted for some reasons
+  colorPrimary: '#888888',
+  colorSecondary: '#2e8bfc',
 
   // UI
   appBg: '#F6F9FC',
@@ -25,8 +26,8 @@ const theme = create({
   textMutedColor: '#666666',
 
   // Toolbar default and active colors
-  barTextColor: '#999999',
-  barSelectedColor: '#008199',
+  barTextColor: '#888888',
+  barSelectedColor: '#2e8bfc',
   barBg: '#FFFFFF',
 
   // Form colors
@@ -36,12 +37,12 @@ const theme = create({
   inputBorderRadius: 4,
 
   // Brand assets
-  brandTitle: 'EXO',
-  brandUrl: 'https://exo.quebec/fr',
+  brandTitle: 'CHRONO - SAEIV',
+  brandUrl: 'https://chronotest.exo.quebec/CarteGeo',
   brandImage: logo,
 })
 
 addons.setConfig({
   theme,
-  showPanel: true
+  showPanel: true,
 })
