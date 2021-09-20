@@ -1,17 +1,17 @@
+import React from 'react'
+import { Story } from '@storybook/angular/dist/ts3.9/client/preview/types-6-0'
+
 import { setCompodocJson } from '@storybook/addon-docs/angular'
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport'
-import { viewports as breakpoints } from '../src/styles/breakpoints'
 import { withDesign } from 'storybook-addon-designs'
-
-import { BADGE } from '@geometricpanda/storybook-addon-badges'
-
-import { addDecorator } from '@storybook/angular'
 import { jsxDecorator } from 'storybook-addon-jsx'
 
+import { GlobalStyle } from '../src/shared/global'
+import { BADGE } from '@geometricpanda/storybook-addon-badges'
+import { viewports as breakpoints } from '../src/styles/breakpoints'
 import docJson from '../documentation.json'
 
 setCompodocJson(docJson)
-addDecorator(jsxDecorator)
 
 // Create custom viewports using widths defined in design tokens
 const breakpointViewports = Object.keys(breakpoints).reduce((acc, key) => {
@@ -19,7 +19,6 @@ const breakpointViewports = Object.keys(breakpoints).reduce((acc, key) => {
     name: `Breakpoint - ${key}`,
     styles: {
       width: `${breakpoints[key as keyof typeof breakpoints]}px`,
-      // Account for padding and border around viewport preview
       height: 'calc(100% - 20px)',
     },
     type: 'other',
@@ -93,6 +92,17 @@ export const parameters = {
     },
   },
   docs: { inlineStories: true },
+  jsx: {
+    useBooleanShorthandSyntax: false,
+    useFragmentShortSyntax: false,
+  },
 }
 
-export const decorators = [withDesign]
+const styleDecorator = (Story: any) => (
+  <>
+    <GlobalStyle />
+    <Story />
+  </>
+)
+
+export const decorators = [withDesign, jsxDecorator, styleDecorator]

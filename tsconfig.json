@@ -27,7 +27,10 @@
     "typeRoots": [
       "node_modules/@types",
       "./src/typings.d.ts"
-    ]
+    ],
+    "paths": {
+      "ngx-chrono-ui-kit": ["projects/ngx-chrono-ui-kit/src/public-api"]
+    }
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

@@ -1,5 +1,5 @@
 {
-  "extends": "../tsconfig.app.json",
+  "extends": "../projects/ngx-chrono-ui-kit/tsconfig.lib.json",
   "compilerOptions": {
     "types": [
       "node"

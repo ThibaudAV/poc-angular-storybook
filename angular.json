@@ -105,6 +105,37 @@
           }
         }
       }
+    },
+    "ngx-chrono-ui-kit": {
+      "projectType": "library",
+      "root": "projects/ngx-chrono-ui-kit",
+      "sourceRoot": "projects/ngx-chrono-ui-kit/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/ngx-chrono-ui-kit/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ngx-chrono-ui-kit/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/ngx-chrono-ui-kit/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngx-chrono-ui-kit/src/test.ts",
+            "tsConfig": "projects/ngx-chrono-ui-kit/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-chrono-ui-kit/karma.conf.js"
+          }
+        }
+      }
     }
   },
   "defaultProject": "app"

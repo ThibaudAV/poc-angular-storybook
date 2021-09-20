@@ -1,0 +1,23 @@
+@use '~@angular/material' as mat;
+@use '../components/button/_button-theme' as button;
+
+@use 'palettes' as palettes;
+
+.light-theme {
+  $light-primary: mat.define-palette(palettes.$primary);
+  $light-accent: mat.define-palette(palettes.$accent);
+  $light-warn: mat.define-palette(palettes.$warn);
+
+  $light-theme: mat.define-light-theme((
+    color: (
+      primary: $light-primary,
+      accent: $light-accent,
+      warn: $light-warn,
+      is-dark: false,
+    )
+  ));
+
+  @include mat.core-theme($light-theme);
+  @include mat.all-component-themes($light-theme);
+  @include button.theme($light-theme);
+}

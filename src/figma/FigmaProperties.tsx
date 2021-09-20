@@ -59,20 +59,14 @@ const FigmaProperties = (props: Props) => {
 
   if (loading) {
     return (
-      <Div>
+      <Div style={{ position: 'relative' }}>
         {Elements.H1}
         <Loader role="progressbar" />
       </Div>
     )
   }
 
-  if (
-    !properties ||
-    properties?.figmaProperties.length === 0 ||
-    properties?.componentProperties.length === 0 ||
-    properties?.same.length === 0 ||
-    properties?.different.length === 0
-  ) {
+  if (!properties || properties?.figmaProperties.length === 0 || properties?.componentProperties.length === 0) {
     return (
       <Div>
         {Elements.H1}
@@ -91,24 +85,20 @@ const FigmaProperties = (props: Props) => {
   }
 
   figmaProperties = properties?.figmaProperties.map((prop: string, index: number) => (
-    <span style={{ marginLeft: '5px' }}>
-      <Badge key={index} status="neutral">
-        {prop}
-      </Badge>
+    <span key={index} style={{ marginLeft: '5px' }}>
+      <Badge status="neutral">{prop}</Badge>
     </span>
   ))
   componentProperties = properties?.componentProperties.map((prop: string, index: number) => (
-    <span style={{ marginLeft: '5px' }}>
-      <Badge key={index} status="neutral">
-        {prop}
-      </Badge>
+    <span key={index} style={{ marginLeft: '5px' }}>
+      <Badge status="neutral">{prop}</Badge>
     </span>
   ))
   listSimilaritiesItems = properties?.same.map((prop: string, index: number) => <td key={index}>{prop}</td>)
   listDifferencesItems = properties?.different.map((prop: string, index: number) => <td key={index}>{prop}</td>)
 
   return (
-    <Div>
+    <Div style={{ position: 'relative' }}>
       {Elements.H1}
       Figma : {figmaProperties}
       <br />
