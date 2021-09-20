@@ -1,6 +1,7 @@
 import React from 'react'
 import { Story } from '@storybook/angular/dist/ts3.9/client/preview/types-6-0'
 
+// @ts-ignore
 import { setCompodocJson } from '@storybook/addon-docs/angular'
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport'
 import { withDesign } from 'storybook-addon-designs'

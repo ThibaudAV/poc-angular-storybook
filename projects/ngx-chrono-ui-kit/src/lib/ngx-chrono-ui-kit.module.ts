@@ -1,11 +1,10 @@
 import { NgModule } from '@angular/core'
 
-import { MatButton, MatButtonModule } from '@angular/material/button'
-// export { MatButton } from '@angular/material/button'
+import { ButtonModule } from '../components/button'
 
 @NgModule({
   declarations: [],
-  imports: [MatButtonModule],
-  exports: [MatButtonModule],
+  imports: [ButtonModule],
+  exports: [ButtonModule],
 })
 export class NgxChronoUiKitModule {}
