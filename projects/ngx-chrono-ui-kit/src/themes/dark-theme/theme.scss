@@ -1,6 +1,6 @@
 @use '~@angular/material' as mat;
 
-@use 'palettes' as palettes;
+@use './palettes' as palettes;
 
 .dark-theme {
   $dark-primary: mat.define-palette(palettes.$primary);

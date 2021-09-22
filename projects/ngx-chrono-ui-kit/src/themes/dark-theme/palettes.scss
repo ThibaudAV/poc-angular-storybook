@@ -10,19 +10,19 @@
 // @deprecated renamed to $dark-primary-text.
 // @breaking-change 8.0.0
 $black-87-opacity: rgba(black, 0.87);
-// @deprecated renamed to $light-primary-text.
+// @deprecated renamed to $dark-primary-text.
 // @breaking-change 8.0.0
 $white-87-opacity: rgba(white, 0.87);
 // @deprecated use $dark-[secondary-text,disabled-text,dividers,focused] instead.
 // @breaking-change 8.0.0
 $black-12-opacity: rgba(black, 0.12);
-// @deprecated use $light-[secondary-text,disabled-text,dividers,focused] instead.
+// @deprecated use $dark-[secondary-text,disabled-text,dividers,focused] instead.
 // @breaking-change 8.0.0
 $white-12-opacity: rgba(white, 0.12);
 // @deprecated use $dark-[secondary-text,disabled-text,dividers,focused] instead.
 // @breaking-change 8.0.0
 $black-6-opacity: rgba(black, 0.06);
-// @deprecated use $light-[secondary-text,disabled-text,dividers,focused] instead.
+// @deprecated use $dark-[secondary-text,disabled-text,dividers,focused] instead.
 // @breaking-change 8.0.0
 $white-6-opacity: rgba(white, 0.06);
 
@@ -31,112 +31,211 @@ $dark-secondary-text: rgba(black, 0.54);
 $dark-disabled-text: rgba(black, 0.38);
 $dark-dividers: rgba(black, 0.12);
 $dark-focused: rgba(black, 0.12);
-$light-primary-text: white;
-$light-secondary-text: rgba(white, 0.7);
-$light-disabled-text: rgba(white, 0.5);
-$light-dividers: rgba(white, 0.12);
-$light-focused: rgba(white, 0.12);
+$dark-primary-text: white;
+$dark-secondary-text: rgba(white, 0.7);
+$dark-disabled-text: rgba(white, 0.5);
+$dark-dividers: rgba(white, 0.12);
+$dark-focused: rgba(white, 0.12);
 
 $primary: (
-  50: #ffebee,
-  100: #ffcdd2,
-  200: #ef9a9a,
-  300: #e57373,
-  400: #ef5350,
-  500: #f44336,
-  600: #e53935,
-  700: #d32f2f,
-  800: #c62828,
-  900: #b71c1c,
-  A100: #ff8a80,
-  A200: #ff5252,
-  A400: #ff1744,
-  A700: #d50000,
-  contrast: (
-    50: $dark-primary-text,
-    100: $dark-primary-text,
-    200: $dark-primary-text,
-    300: $dark-primary-text,
-    400: $dark-primary-text,
-    500: $light-primary-text,
-    600: $light-primary-text,
-    700: $light-primary-text,
-    800: $light-primary-text,
-    900: $light-primary-text,
-    A100: $dark-primary-text,
-    A200: $light-primary-text,
-    A400: $light-primary-text,
-    A700: $light-primary-text,
-  )
+        50 : #e5f3ff,
+        100 : #bde1ff,
+        200 : #91ceff,
+        300 : #65baff,
+        400 : #44abff,
+        500 : #239cff,
+        600 : #1f94ff,
+        700 : #1a8aff,
+        800 : #1580ff,
+        900 : #0c6eff,
+        A100 : #ffffff,
+        A200 : #f6f9ff,
+        A400 : #c3d9ff,
+        A700 : #a9c8ff,
+        contrast: (
+                50 : #000000,
+                100 : #000000,
+                200 : #000000,
+                300 : #000000,
+                400 : #000000,
+                500 : #000000,
+                600 : #ffffff,
+                700 : #ffffff,
+                800 : #ffffff,
+                900 : #ffffff,
+                A100 : #000000,
+                A200 : #000000,
+                A400 : #000000,
+                A700 : #000000,
+        )
+);
+
+$accent: (
+        50 : #f0e5ff,
+        100 : #dbbdff,
+        200 : #c391ff,
+        300 : #aa65ff,
+        400 : #9844ff,
+        500 : #8623ff,
+        600 : #7e1fff,
+        700 : #731aff,
+        800 : #6915ff,
+        900 : #560cff,
+        A100 : #ffffff,
+        A200 : #f8f6ff,
+        A400 : #d2c3ff,
+        A700 : #c0a9ff,
+        contrast: (
+                50 : #000000,
+                100 : #000000,
+                200 : #000000,
+                300 : #000000,
+                400 : #ffffff,
+                500 : #ffffff,
+                600 : #ffffff,
+                700 : #ffffff,
+                800 : #ffffff,
+                900 : #ffffff,
+                A100 : #000000,
+                A200 : #000000,
+                A400 : #000000,
+                A700 : #000000,
+        )
+);
+
+$tertiary: (
+        50 : #f0e5ff,
+        100 : #dbbdff,
+        200 : #c391ff,
+        300 : #aa65ff,
+        400 : #9844ff,
+        500 : #8623ff,
+        600 : #7e1fff,
+        700 : #731aff,
+        800 : #6915ff,
+        900 : #560cff,
+        A100 : #ffffff,
+        A200 : #f8f6ff,
+        A400 : #d2c3ff,
+        A700 : #c0a9ff,
+        contrast: (
+                50 : #000000,
+                100 : #000000,
+                200 : #000000,
+                300 : #000000,
+                400 : #ffffff,
+                500 : #ffffff,
+                600 : #ffffff,
+                700 : #ffffff,
+                800 : #ffffff,
+                900 : #ffffff,
+                A100 : #000000,
+                A200 : #000000,
+                A400 : #000000,
+                A700 : #000000,
+        )
+);
+
+$warn: (
+        50 : #f9e8e8,
+        100 : #f1c7c7,
+        200 : #e8a1a1,
+        300 : #df7b7b,
+        400 : #d85f5f,
+        500 : #d14343,
+        600 : #cc3d3d,
+        700 : #c63434,
+        800 : #c02c2c,
+        900 : #b51e1e,
+        A100 : #ffecec,
+        A200 : #ffb9b9,
+        A400 : #ff8686,
+        A700 : #ff6d6d,
+        contrast: (
+                50 : #000000,
+                100 : #000000,
+                200 : #000000,
+                300 : #000000,
+                400 : #000000,
+                500 : #ffffff,
+                600 : #ffffff,
+                700 : #ffffff,
+                800 : #ffffff,
+                900 : #ffffff,
+                A100 : #000000,
+                A200 : #000000,
+                A400 : #000000,
+                A700 : #000000,
+        )
 );
 
 $grey-palette: (
-  50: #fafafa,
-  100: #f5f5f5,
-  200: #eeeeee,
-  300: #e0e0e0,
-  400: #bdbdbd,
-  500: #9e9e9e,
-  600: #757575,
-  700: #616161,
-  800: #424242,
-  900: #212121,
-  A100: #ffffff,
-  A200: #eeeeee,
-  A400: #bdbdbd,
-  A700: #616161,
-  contrast: (
-    50: $dark-primary-text,
-    100: $dark-primary-text,
-    200: $dark-primary-text,
-    300: $dark-primary-text,
-    400: $dark-primary-text,
-    500: $dark-primary-text,
-    600: $light-primary-text,
-    700: $light-primary-text,
-    800: $light-primary-text,
-    900: $light-primary-text,
-    A100: $dark-primary-text,
-    A200: $dark-primary-text,
-    A400: $dark-primary-text,
-    A700: $light-primary-text,
-  )
+        50: #fafafa,
+        100: #f5f5f5,
+        200: #eeeeee,
+        300: #e0e0e0,
+        400: #bdbdbd,
+        500: #9e9e9e,
+        600: #757575,
+        700: #616161,
+        800: #424242,
+        900: #212121,
+        A100: #ffffff,
+        A200: #eeeeee,
+        A400: #bdbdbd,
+        A700: #616161,
+        contrast: (
+                50: $dark-primary-text,
+                100: $dark-primary-text,
+                200: $dark-primary-text,
+                300: $dark-primary-text,
+                400: $dark-primary-text,
+                500: $dark-primary-text,
+                600: $dark-primary-text,
+                700: $dark-primary-text,
+                800: $dark-primary-text,
+                900: $dark-primary-text,
+                A100: $dark-primary-text,
+                A200: $dark-primary-text,
+                A400: $dark-primary-text,
+                A700: $dark-primary-text,
+        )
 );
 
-// Background palette for light themes.
-$light-theme-background-palette: (
-  status-bar: map.get($grey-palette, 300),
-  app-bar:    map.get($grey-palette, 100),
-  background: map.get($grey-palette, 50),
-  hover:      rgba(black, 0.04), // TODO(kara): check style with Material Design UX
-  card:       white,
-  dialog:     white,
-  disabled-button: rgba(black, 0.12),
-  raised-button: white,
-  focused-button: $dark-focused,
-  selected-button: map.get($grey-palette, 300),
-  selected-disabled-button: map.get($grey-palette, 400),
-  disabled-button-toggle: map.get($grey-palette, 200),
-  unselected-chip: map.get($grey-palette, 300),
-  disabled-list-option: map.get($grey-palette, 200),
-  tooltip: map.get($grey-palette, 700),
+// Background palette for dark themes.
+$dark-theme-background-palette: (
+        status-bar: map.get($grey-palette, 300),
+        app-bar:    map.get($grey-palette, 100),
+        background: map.get($grey-palette, 50),
+        hover:      rgba(black, 0.04), // TODO(kara): check style with Material Design UX
+        card:       white,
+        dialog:     white,
+        disabled-button: rgba(black, 0.12),
+        raised-button: white,
+        focused-button: $dark-focused,
+        selected-button: map.get($grey-palette, 300),
+        selected-disabled-button: map.get($grey-palette, 400),
+        disabled-button-toggle: map.get($grey-palette, 200),
+        unselected-chip: map.get($grey-palette, 300),
+        disabled-list-option: map.get($grey-palette, 200),
+        tooltip: map.get($grey-palette, 700),
 );
 
-// Foreground palette for light themes.
-$light-theme-foreground-palette: (
-  base:              black,
-  divider:           $dark-dividers,
-  dividers:          $dark-dividers,
-  disabled:          $dark-disabled-text,
-  disabled-button:   rgba(black, 0.26),
-  disabled-text:     $dark-disabled-text,
-  elevation:         black,
-  hint-text:         $dark-disabled-text,
-  secondary-text:    $dark-secondary-text,
-  icon:              rgba(black, 0.54),
-  icons:             rgba(black, 0.54),
-  text:              rgba(black, 0.87),
-  slider-min:        rgba(black, 0.87),
-  slider-off:        rgba(black, 0.26),
-  slider-off-active: rgba(black, 0.38),
+// Foreground palette for dark themes.
+$dark-theme-foreground-palette: (
+        base:              black,
+        divider:           $dark-dividers,
+        dividers:          $dark-dividers,
+        disabled:          $dark-disabled-text,
+        disabled-button:   rgba(black, 0.26),
+        disabled-text:     $dark-disabled-text,
+        elevation:         black,
+        hint-text:         $dark-disabled-text,
+        secondary-text:    $dark-secondary-text,
+        icon:              rgba(black, 0.54),
+        icons:             rgba(black, 0.54),
+        text:              rgba(black, 0.87),
+        slider-min:        rgba(black, 0.87),
+        slider-off:        rgba(black, 0.26),
+        slider-off-active: rgba(black, 0.38),
 );

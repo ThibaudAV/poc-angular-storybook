@@ -1,5 +1,6 @@
 import { addons } from '@storybook/addons'
 import { create } from '@storybook/theming'
+// @ts-ignore
 import logo from './../src/assets/logo/chrono-logo.svg'
 
 const theme = create({

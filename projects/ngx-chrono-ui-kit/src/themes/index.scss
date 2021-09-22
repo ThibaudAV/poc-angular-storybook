@@ -3,7 +3,7 @@
 
 @include mat.core();
 
-@import 'light-theme/theme';
-@import 'dark-theme/theme';
+@import './light-theme/theme';
+@import './dark-theme/theme';
 
 @include mat.core(typography.$my-custom-typography-config);

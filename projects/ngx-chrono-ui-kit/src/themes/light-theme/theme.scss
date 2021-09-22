@@ -1,7 +1,7 @@
 @use '~@angular/material' as mat;
 @use '../components/button/_button-theme' as button;
 
-@use 'palettes' as palettes;
+@use './palettes' as palettes;
 
 .light-theme {
   $light-primary: mat.define-palette(palettes.$primary);

@@ -1,13 +1,13 @@
 import React from 'react'
 import { Story, Meta, moduleMetadata } from '@storybook/angular'
 import { Title, Subtitle, Description, Primary, ArgsTable, Stories, PRIMARY_STORY } from '@storybook/addon-docs'
-
+import { ButtonComponent, ButtonModule } from 'ngx-chrono-ui-kit'
 import { BADGE } from '@geometricpanda/storybook-addon-badges'
+
+// @ts-ignore
 import Readme from './README.mdx'
 import * as FigmaUrl from '../../figma/urls.json'
-// import * as FigmaProperties from '../../figma/FigmaProperties'
-
-import { ButtonComponent, ButtonModule } from 'ngx-chrono-ui-kit'
+// import FigmaProperties from '../../figma/FigmaProperties'
 
 export default {
   title: 'Components/Button',
@@ -17,9 +17,6 @@ export default {
       imports: [ButtonModule],
     }),
   ],
-  argTypes: {
-    backgroundColor: { control: 'color' },
-  },
   parameters: {
     design: {
       url: FigmaUrl.Button.design,
@@ -48,6 +45,10 @@ const Template: Story<ButtonComponent> = (args: ButtonComponent) => ({
 
 export const Default = Template.bind({})
 Default.args = {
-  // primary: true,
-  // label: 'Button',
+  color: 'primary',
 } as Partial<ButtonComponent>
+
+// export const Secondary = Template.bind({})
+// Secondary.args = {
+//   color: 'warn',
+// } as Partial<ButtonComponent>

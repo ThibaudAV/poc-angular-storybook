@@ -6,6 +6,14 @@ module.exports = {
       name: '@storybook/addon-docs',
       options: { transcludeMarkdown: true },
     },
+
+    /**
+     * A storybook addon to display react docgen info.
+     *
+     * @see https://storybook.js.org/addons/storybook-addon-react-docgen
+     */
+    // 'storybook-addon-react-docgen',
+
     /**
      * Present including "essential" Storybook addons, such as:
      *
@@ -47,7 +55,7 @@ module.exports = {
       options: {
         actions: false,
         backgrounds: true,
-        controls: false,
+        controls: true,
         docs: true,
         viewport: true,
         toolbars: true,
@@ -110,4 +118,15 @@ module.exports = {
   features: {
     postcss: false,
   },
+  // typescript: {
+  //   reactDocgen: 'react-docgen-typescript',
+  //   reactDocgenTypescriptOptions: {
+  //     shouldRemoveUndefinedFromOptional: true,
+  //     propFilter: prop => {
+  //       return prop.parent
+  //         ? !/node_modules/.test(prop.parent.fileName) || /ngx-chrono-ui-kit/.test(prop.parent.fileName)
+  //         : true
+  //     },
+  //   },
+  // },
 }

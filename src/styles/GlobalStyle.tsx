@@ -2,7 +2,7 @@ import { createGlobalStyle, css } from 'styled-components'
 import { resetCSS } from './CSSReset'
 
 export const GlobalStyle = createGlobalStyle(
-  () => css`
+  ({}) => css`
     ${resetCSS}
     // smooth light-dark mode transition
     * {

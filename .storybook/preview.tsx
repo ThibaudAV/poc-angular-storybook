@@ -1,14 +1,13 @@
 import React from 'react'
-import { Story } from '@storybook/angular/dist/ts3.9/client/preview/types-6-0'
 
-// @ts-ignore
 import { setCompodocJson } from '@storybook/addon-docs/angular'
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport'
 import { withDesign } from 'storybook-addon-designs'
 import { jsxDecorator } from 'storybook-addon-jsx'
+// import { withPropsTable } from 'storybook-addon-react-docgen'
 
+import { BADGES } from './constants'
 import { GlobalStyle } from '../src/shared/global'
-import { BADGE } from '@geometricpanda/storybook-addon-badges'
 import { viewports as breakpoints } from '../src/styles/breakpoints'
 import docJson from '../documentation.json'
 
@@ -39,30 +38,7 @@ export const parameters = {
     },
   },
   badgesConfig: {
-    [BADGE.DEFAULT]: {
-      contrast: '#EDEFF5',
-      color: '#474D66',
-    },
-    [BADGE.BETA]: {
-      contrast: '#D6E0FF',
-      color: '#2952CC',
-    },
-    [BADGE.STABLE]: {
-      contrast: '#DCF2EA',
-      color: '#317159',
-    },
-    [BADGE.NEEDS_REVISION]: {
-      contrast: '#FFEFD2',
-      color: '#66460D',
-    },
-    [BADGE.OBSOLETE]: {
-      contrast: '#F9DADA',
-      color: '#7D2828',
-    },
-    [BADGE.EXPERIMENTAL]: {
-      contrast: '#E7E4F9',
-      color: '#6E62B6',
-    },
+    BADGES,
   },
   previewTabs: {
     'storybook/docs/panel': {

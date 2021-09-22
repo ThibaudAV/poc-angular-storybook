@@ -1,16 +1,16 @@
-import { TestBed } from '@angular/core/testing';
+import { TestBed } from '@angular/core/testing'
 
-import { NgxChronoUiKitService } from './ngx-chrono-ui-kit.service';
+import { NgxChronoUiKitService } from 'ngx-chrono-ui-kit'
 
 describe('NgxChronoUiKitService', () => {
-  let service: NgxChronoUiKitService;
+  let service: NgxChronoUiKitService
 
   beforeEach(() => {
-    TestBed.configureTestingModule({});
-    service = TestBed.inject(NgxChronoUiKitService);
-  });
+    TestBed.configureTestingModule({})
+    service = TestBed.inject(NgxChronoUiKitService)
+  })
 
   it('should be created', () => {
-    expect(service).toBeTruthy();
-  });
-});
+    expect(service).toBeTruthy()
+  })
+})
