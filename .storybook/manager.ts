@@ -47,3 +47,7 @@ addons.setConfig({
   theme,
   showPanel: true,
 })
+
+export const parameters = {
+  docs: { inlineStories: true },
+}

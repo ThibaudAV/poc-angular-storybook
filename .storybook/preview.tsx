@@ -82,4 +82,4 @@ const styleDecorator = (Story: any) => (
   </>
 )
 
-export const decorators = [withDesign, jsxDecorator, styleDecorator]
+export const decorators = [withDesign, jsxDecorator]

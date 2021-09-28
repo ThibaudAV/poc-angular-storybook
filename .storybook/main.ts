@@ -118,6 +118,9 @@ module.exports = {
   features: {
     postcss: false,
   },
+  angularOptions: {
+    enableIvy: true,
+  },
   // typescript: {
   //   reactDocgen: 'react-docgen-typescript',
   //   reactDocgenTypescriptOptions: {
